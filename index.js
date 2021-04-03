@@ -1,7 +1,10 @@
-const express = require('express')
-const app = express()
-const port = 5000
+const express = require('express');
+var cors = require('cors');
+const app = express();
+const port = 5000;
 const fs = require('fs');
+
+app.use(cors());
 
 app.get('/:filename', (req, res) => {
     let ext = '';
